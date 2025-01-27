@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css">
+    <title>DevBurger</title>
+</head>
+<body>
+    
+    <!--HEADER-->
+<header class="w-full h-[400px] bg-zinc-900 bg-home bg-cover bg-center">
+    <div class="w-full h-full flex flex-col justify-center items-center">
+        <img 
+        src="./assets/h7.jpg" 
+        alt="Logo Hamburguer"
+        class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"
+        />
+        <h1 class="text-4xl mt-4 mb-2 font-bold text-blue-900" >
+            Dev Burguer
+        </h1>
+
+        <span class="text-blue-900 font-medium">Rua Dev 1020, Florianópolis - SC</span>
+
+        <div class="bg-green-600 px-1 py-1 rounded-lg mt-5 id="date-span">
+            <span class="text-white font-medium">Seg a Dom - 18:00 as 22:00</span>
+        </div>
+    </div>
+</header>
+    <!--FIM DO HEADER-->
+    <h2 class="text-2xl md:text-4xl font-bold text-center mt-9 mb-6">
+        Conheça nosso menu
+    </h2>
+
+    <!--INÍCIO MENU-->
+    <div id="menu">
+
+        <main class="grid grid-cols-1">
+
+            <!-- PRODUTO ITEM-->
+            <div class="flex gap-2">
+                <img 
+                    src="./assets/h1.jpg" 
+                    alt="Hamburguer especial"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-200"
+                >
+                
+                <div>
+                    <p class="font-bold">Hamburguer especial</p>
+                    <p class="text-sm">Pão leve com fermentação de trigo, burger 120g, alface, queijo,
+                    tomate e molho especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$24.90</p>
+                        <button 
+                            class="bg-gray-900 px-5 rounded add-to-card-btn"
+                            data-name="Hamburguer especial"
+                            data-price="24.90"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- FIM PRODUTO ITEM-->
+
+        </main>
+
+    </div>
+
+    <!--FIM MENU-->
+</body>
+</html>
