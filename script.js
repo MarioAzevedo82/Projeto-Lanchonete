@@ -9,6 +9,8 @@ const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
 
+
+let cart = []; 
 // Abrir o modal do carrinho
 cartBtn.addEventListener("click", function(){
     cartModal.style.display = "flex"
@@ -25,3 +27,41 @@ cartModal.addEventListener("click", function(event){
 closeModalBtn.addEventListener("click", function(){
     cartModal.style.display = "none"
 })
+
+// Acessar o Menu
+
+menu.addEventListener("click", function(event){
+   // console.log(event.target)
+
+   let parentButton = event.target.closest(".add-to-card-btn")
+   
+   if(parentButton){
+
+       const name = parentButton.getAttribute("data-name")
+       const price = parseFloat(parentButton.getAttribute("data-price"))
+       //console.log(name)
+       //console.log(price)
+
+        // Adicionar no carrinho.
+        addToCart(name, price)
+    }
+
+
+})
+
+// Função para adicionar no carrinho
+function addToCart(name, price){
+    const existingItem = cart.find(item => item.name === name) 
+
+    if(existingItem){
+        //Se o item já existe, aumenta apenas a quantidade + 1
+        existingItem.quantity += 1;
+        return;
+
+    }
+    cart.push({
+        name,
+        price,
+        quantity: 1,
+    })
+}
