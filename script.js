@@ -9,4 +9,19 @@ const cartCounter = document.getElementById("cart-count")
 const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
 
+// Abrir o modal do carrinho
+cartBtn.addEventListener("click", function(){
+    cartModal.style.display = "flex"
+})
 
+// Fechar o modal qnd clicar fora
+
+cartModal.addEventListener("click", function(event){
+    if(event.target === cartModal){
+        cartModal.style.display = "none"
+    }
+})
+
+closeModalBtn.addEventListener("click", function(){
+    cartModal.style.display = "none"
+})
