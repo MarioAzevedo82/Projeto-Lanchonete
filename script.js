@@ -106,4 +106,6 @@ function updateCartModal(){
         currency: "BRL"
     });
 
+    cartCounter.innerHTML = cart.length;
+
 }
