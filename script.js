@@ -148,13 +148,22 @@ addressInput.addEventListener("input", function(event){
 
 })
 
+// Finalizar o pedido
 checkoutBtn.addEventListener("click", function(){
-    if(cart.length === 0) return;
 
+    const isOpen = checkRestaurantOpen();
+    if(!isOpen){
+        alert("RESTAURANTE FECHADO NO MOMENTO!")
+        return; 
+    }
+
+    if(cart.length === 0) return;
     if(addressInput.value === ""){
         addressWarn.classList.remove("hidden")
         addressInput.classList.add("border-red-500")
     }
+
+    
 })
 
 // Validar a hora e manipular o card horário
