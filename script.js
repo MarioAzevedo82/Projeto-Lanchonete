@@ -163,7 +163,21 @@ checkoutBtn.addEventListener("click", function(){
         addressInput.classList.add("border-red-500")
     }
 
+    // Enviar o pedido pra api do whatsapp
+    const cartItems = cart.map((item) => {
+        return (
+            ` ${item.name} Quantidade: (${item.quantity}) Preço: R$${item.price} |`
+        )
+    }) .join("")
     
+    const message = encodeURIComponent(cartItems)
+    const phone = "+55xx9xxxxxxxx"
+
+    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+
+    cart = [];
+    updateCartModal();
+
 })
 
 // Validar a hora e manipular o card horário
