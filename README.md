@@ -1,3 +1,5 @@
+https://marioazevedo82.github.io/Projeto-Lanchonete/
+
 Esse é um projeto de um cardápio virtual para uma lanchonete. 
 
 Serão utilizados as seguintes tecnologias: HTML, CSS, TailwindCSS e JavaScript.
